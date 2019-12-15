@@ -42,7 +42,7 @@ void loop() {
         FastLED.show();
         FastLED.delay(200);
       }
-      lightUp = false;
     }
+    lightUp = false;
   }
 }
