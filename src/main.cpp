@@ -27,19 +27,22 @@ void setup() {
 
 void loop() {
   if (lightUp) {
-    Serial.println(analogRead(0));
-    setColour();
-    for (int i = 0; i < maxBrightness; i++) {
-      FastLED.setBrightness(i);
-      FastLED.show();
-      FastLED.delay(100);
+    const auto light = analogRead(0);
+    Serial.println(light);
+    if (light > 100) {
+      setColour();
+      for (int i = 0; i < maxBrightness; i++) {
+        FastLED.setBrightness(i);
+        FastLED.show();
+        FastLED.delay(100);
+      }
+      delay(peeDelay);
+      for (int i = maxBrightness; i >= 0; i--) {
+        FastLED.setBrightness(i);
+        FastLED.show();
+        FastLED.delay(200);
+      }
+      lightUp = false;
     }
-    delay(peeDelay);
-    for (int i = maxBrightness; i >= 0; i--) {
-      FastLED.setBrightness(i);
-      FastLED.show();
-      FastLED.delay(200);
-    }
-    lightUp = false;
   }
 }
