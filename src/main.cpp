@@ -7,7 +7,7 @@
 
 static const int maxBrightness = 200;
 static const int peeDelay = 2000;  // 1000 * 60 * 10;
-static const int lightTrigger = 110;
+static const int lightTrigger = 200;
 
 static bool lightUp = false;
 static const int LED_COUNT = 28;
