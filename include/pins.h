@@ -1,4 +1,5 @@
 #define LED_STRIP_PIN 3
 #define PIR_SENSOR_PIN 4
+#define LED_STIP_POWER_PIN 1
 
 #define LIGHT_SENSOR_PIN A0
