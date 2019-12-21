@@ -40,6 +40,7 @@ void sleep() {
   GIMSK = _BV(PCIE);
   PCMSK = _BV(PIR_SENSOR_PIN);
   ADCSRA &= ~_BV(ADEN);
+  MCUCR |= _BV(ISC01) | _BV(ISC00);  // Added?
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
 
   sleep_enable();
