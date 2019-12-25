@@ -5,8 +5,8 @@
 #include <avr/sleep.h>
 #include "pins.h"
 
-static const int maxBrightness = 200;
-static const int peeDelay = 10000;  // 1000 * 60 * 10;
+static const int maxBrightness = 150;
+static const int peeDelay = 15000;  // 1000 * 60 * 10;
 static const int lightTrigger = 400;
 
 static volatile bool lightUp = false;
